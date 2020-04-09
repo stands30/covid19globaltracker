@@ -4,11 +4,16 @@ import { Cards, Chart, CountryPicker} from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 import coronaImg from './images/image.png';
+import ReactGA from 'react-ga';
 
 class App extends React.Component{
     state={
         data:{},
         country:'',
+    }
+     initializeReactGA = ()=> {
+        ReactGA.initialize('UA-162979718-1');
+        ReactGA.pageview('/homepage');
     }
     async componentDidMount(){
         const fetchedData = await fetchData();
