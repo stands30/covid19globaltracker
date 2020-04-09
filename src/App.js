@@ -12,8 +12,8 @@ class App extends React.Component{
         country:'',
     }
      initializeReactGA = ()=> {
-        ReactGA.initialize('UA-162979718-1');
-        ReactGA.pageview('/homepage');
+        // ReactGA.initialize('UA-162979718-1');
+        // ReactGA.pageview('/');
     }
     async componentDidMount(){
         const fetchedData = await fetchData();
@@ -25,6 +25,8 @@ class App extends React.Component{
         this.setState({data:fetchedData,country:country});
     }
     render(){
+        ReactGA.initialize('UA-162979718-1');
+        ReactGA.pageview('/');
         const { data,country } = this.state;
         return(
             <div className={styles.container}>
