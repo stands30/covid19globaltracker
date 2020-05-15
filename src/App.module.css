@@ -20,3 +20,13 @@ body{
         width: 100%;
     }
 }
+.footer{
+    overflow: hidden;
+    color: rgba(255,255,255,0.6);
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 13px 0 10px;
+    background-color: #7f7fff;
+    width: 100%;
+    text-align: center;
+}
